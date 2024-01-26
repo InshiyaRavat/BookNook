@@ -197,7 +197,7 @@ body{
   /* ######################## loading page end ############################## */
 /* ######################### login page ##################################### */
 .bg-login{
-    background-image: url('https://img.freepik.com/free-photo/creative-world-book-day-arrangement_23-2148883769.jpg');
+    background-image: url('https://www.pwcva.gov/assets/2022-11/mikolaj-DCzpr09cTXY-unsplash.jpg');
     position: absolute;
     background-size: cover;
     background-position: center;
@@ -206,7 +206,7 @@ body{
     width: 95%;
 }
 .wrapper {
-    --input-focus: #A1CDA8;
+    --input-focus: #EF8354;
     --font-color: #323232;
     --font-color-sub: #666;
     --bg-color: #fff;
@@ -257,7 +257,7 @@ body{
     top: 0;
     width: 70px;
     text-decoration: underline;
-    color: var(--font-color);
+    color: var(--bg-color);
     font-weight: 600;
   }
   
@@ -268,7 +268,7 @@ body{
     top: 0;
     width: 60px;
     text-decoration: none;
-    color: var(--font-color);
+    color: var(--bg-color);
     font-weight: 600;
   }
   
@@ -353,7 +353,7 @@ body{
     justify-content: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    background: #B5DFCA;
+    background: #BFC0C0;
     gap: 20px;
     border-radius: 5px;
     border: 2px solid var(--main-color);
@@ -421,3 +421,42 @@ body{
     color: var(--font-color);
     cursor: pointer;
   } 
+/* ######################### login page end ########################### */
+/* ######################### store #################################### */
+.mycard{
+  position: relative;
+  background: #EFF0F0;
+  border: solid 4px #4F5D75;
+  box-shadow: -5px 5px #4F5D75;
+  transition: all .2s ease-in-out;
+  display: flex;
+  border-radius: 0;
+  justify-content: center;
+  cursor: pointer;
+}
+.mycard:hover {
+  /* margin: 20px 20px 0 0;   */
+  transform: translate(-5px, 5px);
+  box-shadow: 0px 0px #4F5D75;
+}
+.cardprice {
+  font-size: 20px;
+  font-weight: 500;
+  color : #4F5D75;
+}
+.cardprice span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #4F5D75;
+}
+.mycardtitle {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #2D3142;
+}
+.cardsubtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2D3142;
+}
