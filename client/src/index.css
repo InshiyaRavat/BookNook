@@ -202,7 +202,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90%;
+    height: 90vh;
     width: 95%;
 }
 .wrapper {
@@ -212,9 +212,31 @@ body{
     --bg-color: #fff;
     --bg-color-alt: #666;
     --main-color: #323232;
-    margin-left: 950px;
-    margin-top: 250px;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    max-width: 600px; 
   }
+  @media only screen and (max-width: 1024px) {
+    .wrapper {
+        max-width: 80%;
+        left: 70%;
+        top: 40%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .bg-login{
+        width: 85%;
+        height: 90%;
+    }
+    .wrapper {
+        max-width: 90%;
+        width: 100%;
+        height: 10%;
+        left: 83%;
+    }
+}
   /* switch card */
   .switch {
     transform: translateY(-200px);
