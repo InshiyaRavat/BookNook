@@ -11,6 +11,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route exact path="/login" Component={Login} />
+        <Route exact path="/loading" Component={Loading} />
         <Route exact path="/" Component={Store} />
         </Routes>
       </BrowserRouter>
