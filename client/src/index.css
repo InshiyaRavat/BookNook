@@ -3,8 +3,8 @@ body{
 }
 /* #################### loading page #################### */
 .loader {
-    --background: linear-gradient(135deg, #A1D2CE, #78CAD2);
-    --shadow: #5497A7;
+    --background: linear-gradient(135deg, #657287, #5A687E);
+    --shadow: #55637A;
     --text: #6C7486;
     --page: rgba(255, 255, 255, 0.36);
     --page-fold: rgba(255, 255, 255, 0.52);
