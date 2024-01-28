@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Loading from "../components/Loading"
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Store = () => {
 
@@ -88,6 +90,7 @@ const Store = () => {
   
   return (
     <div>
+      <Navbar/>
       {books.length === 0 ? (
         <Loading />
       ) : (
@@ -112,6 +115,7 @@ const Store = () => {
           ))}
         </div>
       )}
+      <Footer/>
     </div>
   );
 }  
