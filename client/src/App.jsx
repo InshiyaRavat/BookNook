@@ -3,11 +3,14 @@ import { BrowserRouter, Route,BrowserRouter as Router, Routes } from 'react-rout
 import Loading from './components/Loading';
 import Login from './components/Login';
 import Store from './components/Store';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   
   return (
     <div className="App">
+      <Navbar/>
       <BrowserRouter>
       <Routes>
         <Route exact path="/login" Component={Login} />
@@ -15,6 +18,7 @@ function App() {
         <Route exact path="/" Component={Store} />
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }
