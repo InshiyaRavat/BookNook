@@ -467,4 +467,9 @@ body{
   font-weight: 400;
   color: #2D3142;
 }
+.form-control:focus{
+  border-color: #4F5D75;
+  box-shadow: none;
+  border-width: 0.05cm; 
+}
 /* ############################## store end ################################# */
