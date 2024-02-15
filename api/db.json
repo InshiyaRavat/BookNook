@@ -1,0 +1,180 @@
+{
+    "AllBooks": [
+        {
+          "title": "The Great Gatsby",
+          "price": 12.99,
+          "imageUrl": "https://via.placeholder.com/150?text=The+Great+Gatsby",
+          "description": "The Great Gatsby is a novel written by American author F. Scott Fitzgerald...",
+          "category": "Classic"
+        },
+        {
+          "title": "To Kill a Mockingbird",
+          "price": 10.49,
+          "imageUrl": "https://via.placeholder.com/150?text=To+Kill+a+Mockingbird",
+          "description": "To Kill a Mockingbird is a novel by Harper Lee published in 1960...",
+          "category": "Classic"
+        },
+        {
+          "title": "1984",
+          "price": 9.99,
+          "imageUrl": "https://via.placeholder.com/150?text=1984",
+          "description": "1984 is a dystopian novel by George Orwell published in 1949...",
+          "category": "Science Fiction"
+        },
+        {
+          "title": "Pride and Prejudice",
+          "price": 11.99,
+          "imageUrl": "https://via.placeholder.com/150?text=Pride+and+Prejudice",
+          "description": "Pride and Prejudice is a romantic novel of manners written by Jane Austen...",
+          "category": "Romance"
+        },
+        {
+          "title": "The Catcher in the Rye",
+          "price": 10.99,
+          "imageUrl": "https://via.placeholder.com/150?text=The+Catcher+in+the+Rye",
+          "description": "The Catcher in the Rye is a novel by J. D. Salinger published in 1951...",
+          "category": "Classic"
+        },
+        {
+          "title": "The Hobbit",
+          "price": 14.99,
+          "imageUrl": "https://via.placeholder.com/150?text=The+Hobbit",
+          "description": "The Hobbit, or There and Back Again, is a fantasy novel by J. R. R. Tolkien...",
+          "category": "Fantasy"
+        },
+        {
+          "title": "The Lord of the Rings",
+          "price": 19.99,
+          "imageUrl": "https://via.placeholder.com/150?text=The+Lord+of+the+Rings",
+          "description": "The Lord of the Rings is an epic high-fantasy novel by J. R. R. Tolkien...",
+          "category": "Fantasy"
+        },
+        {
+          "title": "Harry Potter and the Philosopher's Stone",
+          "price": 13.99,
+          "imageUrl": "https://via.placeholder.com/150?text=Harry+Potter+and+the+Philosopher%27s+Stone",
+          "description": "Harry Potter and the Philosopher's Stone is a fantasy novel by J. K. Rowling...",
+          "category": "Fantasy"
+        },
+        {
+          "title": "Moby-Dick",
+          "price": 15.99,
+          "imageUrl": "https://via.placeholder.com/150?text=Moby-Dick",
+          "description": "Moby-Dick; or, The Whale is an 1851 novel by American writer Herman Melville...",
+          "category": "Adventure"
+        },
+        {
+          "title": "The Adventures of Huckleberry Finn",
+          "price": 11.99,
+          "imageUrl": "https://via.placeholder.com/150?text=The+Adventures+of+Huckleberry+Finn",
+          "description": "Adventures of Huckleberry Finn is a novel by Mark Twain, first published in the United Kingdom in December 1884...",
+          "category": "Adventure"
+        },
+        {
+          "title": "The Odyssey",
+          "price": 12.99,
+          "imageUrl": "https://via.placeholder.com/150?text=The+Odyssey",
+          "description": "The Odyssey is one of two major ancient Greek epic poems attributed to Homer...",
+          "category": "Classic"
+        },
+        {
+          "title": "Hamlet",
+          "price": 9.99,
+          "imageUrl": "https://via.placeholder.com/150?text=Hamlet",
+          "description": "Hamlet is a tragedy by William Shakespeare, probably written between 1599 and 1601...",
+          "category": "Classic"
+        },
+        {
+          "title": "The Divine Comedy",
+          "price": 14.99,
+          "imageUrl": "https://via.placeholder.com/150?text=The+Divine+Comedy",
+          "description": "The Divine Comedy is a long Italian narrative poem by Dante Alighieri...",
+          "category": "Classic"
+        },
+        {
+          "title": "Alice's Adventures in Wonderland",
+          "price": 10.49,
+          "imageUrl": "https://via.placeholder.com/150?text=Alice%27s+Adventures+in+Wonderland",
+          "description": "Alice's Adventures in Wonderland is an 1865 novel by Lewis Carroll...",
+          "category": "Fantasy"
+        },
+        {
+          "title": "The Picture of Dorian Gray",
+          "price": 11.99,
+          "imageUrl": "https://via.placeholder.com/150?text=The+Picture+of+Dorian+Gray",
+          "description": "The Picture of Dorian Gray is a Gothic and philosophical novel by Oscar Wilde...",
+          "category": "Classic"
+        },
+        {
+          "title": "War and Peace",
+          "price": 18.99,
+          "imageUrl": "https://via.placeholder.com/150?text=War+and+Peace",
+          "description": "War and Peace is a novel by the Russian author Leo Tolstoy, first published serially...",
+          "category": "Classic"
+        },
+        {
+          "title": "Don Quixote",
+          "price": 15.99,
+          "imageUrl": "https://via.placeholder.com/150?text=Don+Quixote",
+          "description": "Don Quixote is a Spanish novel by Miguel de Cervantes. It was published in two parts...",
+          "category": "Classic"
+        },
+        {
+          "title": "Crime and Punishment",
+          "price": 12.99,
+          "imageUrl": "https://via.placeholder.com/150?text=Crime+and+Punishment",
+          "description": "Crime and Punishment is a novel by the Russian author Fyodor Dostoevsky...",
+          "category": "Classic"
+        },
+        {
+          "title": "The Brothers Karamazov",
+          "price": 14.99,
+          "imageUrl": "https://via.placeholder.com/150?text=The+Brothers+Karamazov",
+          "description": "The Brothers Karamazov, also translated as The Karamazov Brothers, is the final novel...",
+          "category": "Classic"
+        },
+        {
+          "title": "Frankenstein",
+          "price": 10.99,
+          "imageUrl": "https://via.placeholder.com/150?text=Frankenstein",
+          "description": "Frankenstein; or, The Modern Prometheus is a novel written by English author Mary Shelley...",
+          "category": "Classic"
+        },
+        {
+          "title": "Dracula",
+          "price": 11.99,
+          "imageUrl": "https://via.placeholder.com/150?text=Dracula",
+          "description": "Dracula is an 1897 Gothic horror novel by Irish author Bram Stoker...",
+          "category": "Classic"
+        },
+        {
+          "title": "Brave New World",
+          "price": 12.99,
+          "imageUrl": "https://via.placeholder.com/150?text=Brave+New+World",
+          "description": "Brave New World is a dystopian social science fiction novel by English author Aldous Huxley...",
+          "category": "Science Fiction"
+        },
+        {
+          "title": "The Road",
+          "price": 11.49,
+          "imageUrl": "https://via.placeholder.com/150?text=The+Road",
+          "description": "The Road is a post-apocalyptic novel by American writer Cormac McCarthy...",
+          "category": "Science Fiction"
+        },
+        {
+          "title": "The Alchemist",
+          "price": 9.99,
+          "imageUrl": "https://via.placeholder.com/150?text=The+Alchemist",
+          "description": "The Alchemist is a novel by Brazilian author Paulo Coelho that was first published in 1988...",
+          "category": "Adventure"
+        },
+        {
+          "title": "Siddhartha",
+          "price": 10.49,
+          "imageUrl": "https://via.placeholder.com/150?text=Siddhartha",
+          "description": "Siddhartha is a novel by Hermann Hesse that deals with the spiritual journey of...",
+          "category": "Adventure"
+        }
+      ]
+      
+  }

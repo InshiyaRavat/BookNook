@@ -1,6 +1,16 @@
 import React from 'react'
 
 const Loading = () => {
+    async function getQoute(){
+        const response= await fetch({
+            url: 'https://api.api-ninjas.com/v1/quotes?category=inspirational',
+            headers: {
+              'X-Api-Key': '04mTphFa2PO+xZ3J6XpokA==5oxX4PczXBElBMHL'
+            },
+          })
+        .then(res => res.json())
+        .catch(err => err.message) 
+    }
   return (
     <div class="loader">
     <div>
