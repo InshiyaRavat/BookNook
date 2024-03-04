@@ -45,9 +45,9 @@ const Navbar = () => {
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class={`nav-link ${activeTab === 'Store' ? 'active' : ''}`} value='Store' onClick={handleClick} aria-current="page" href="#">Book Store</a>
-                    <a class={`nav-link ${activeTab === 'Rent' ? 'active' : ''}`} value='Rent' onClick={handleClick} href="#">Rent Books</a>
-                    <a class={`nav-link ${activeTab === 'Cart' ? 'active' : ''}`} value='Cart' onClick={handleClick} href="#">Cart</a>
+                    <a class={`nav-link ${activeTab === 'Store' ? 'active' : ''}`} value='Store' onClick={handleClick} aria-current="page" href="/store">Book Store</a>
+                    <a class={`nav-link ${activeTab === 'Rent' ? 'active' : ''}`} value='Rent' onClick={handleClick} href="/rent">Rent Books</a>
+                    <a class={`nav-link ${activeTab === 'Cart' ? 'active' : ''}`} value='Cart' onClick={handleClick} href="/cart">Cart</a>
                 </div>
                 </div>
                 <Avatar {...stringAvatar('Inshiya Ravat')} />
