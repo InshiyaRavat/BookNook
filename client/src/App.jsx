@@ -5,6 +5,9 @@ import Login from './components/Login';
 import Store from './components/Store';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Products from './components/store/Products';
+import Rent from './components/Rent';
+import Cart from './components/Cart';
 
 function App() {
   
@@ -15,7 +18,12 @@ function App() {
       <Routes>
         <Route exact path="/login" Component={Login} />
         <Route exact path="/loading" Component={Loading} />
-        <Route exact path="/" Component={Store} />
+        <Route exact path="/product/:title" Component={Products} />
+        <Route exact path="/rent" Component={Rent}/>
+        <Route exact path="/cart" Component={Cart}/>
+        <Route exact path='/store' Component={Store}/>
+        <Route exact path="/" Component={Login}/>
+        <Route path="/*" element={<div>404 : Page Not Found</div>}/>
         </Routes>
       </BrowserRouter>
       <Footer/>
