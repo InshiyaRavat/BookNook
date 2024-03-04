@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Loading from '../components/Loading';
+import { Link } from 'react-router-dom';
 
 const Store = () => {
   const [search, setSearch] = useState('');
@@ -26,9 +27,6 @@ const Store = () => {
       setLoading(false);
     }
   }
-
-
-
   useEffect(() => {
     fetchBooks();
   }, []);
@@ -58,22 +56,30 @@ const Store = () => {
             </button>
           </form>
           {books.map((book, index) => (
-            <div key={index} className="mycard card mb-3">
-              <div className="row g-0">
-                <div className="col-md-4">
-                  <img src={book.imageUrl} className="imgCard card-img-top" alt={book.title} style={{ maxWidth: '100px !important', height: '200px !important' }} />
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body">
-                    <h5 className="mycardtitle card-title">{book.title}</h5>
-                    <p className="cardsubtitle card-text">{book.description}</p>
-                    <small className="cardprice text-body-secondary">
-                      <span>$</span> {book.price}
-                    </small>
+            <Link
+              to={{
+                pathname: `/product/${book.title}`, 
+                state: {title:book.title,price:book.price,imageUrl:book.imageUrl,description:book.description,category:book.category,id:book.id},
+              }}
+              style={{ textDecoration: 'none' }}
+            >
+              <div key={index} className="mycard card mb-3">
+                <div className="row g-0">
+                  <div className="col-md-4">
+                    <img src={book.imageUrl} className="imgCard card-img-top" alt={book.title} style={{ maxWidth: '100px !important', height: '200px !important' }} />
+                  </div>
+                  <div className="col-md-8">
+                    <div className="card-body">
+                      <h5 className="mycardtitle card-title">{book.title}</h5>
+                      <p className="cardsubtitle card-text">{book.description}</p>
+                      <small className="cardprice text-body-secondary">
+                        <span>$</span> {book.price}
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}
