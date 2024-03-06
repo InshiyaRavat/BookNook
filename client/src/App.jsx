@@ -3,7 +3,6 @@ import { BrowserRouter, Route,BrowserRouter as Router, Routes } from 'react-rout
 import Loading from './components/Loading';
 import Login from './components/Login';
 import Store from './components/Store';
-import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Products from './components/store/Products';
 import Rent from './components/Rent';
@@ -13,7 +12,6 @@ function App() {
   
   return (
     <div className="App">
-      <Navbar/>
       <BrowserRouter>
       <Routes>
         <Route exact path="/login" Component={Login} />
