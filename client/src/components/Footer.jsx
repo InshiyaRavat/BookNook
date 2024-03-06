@@ -5,7 +5,7 @@ const Footer = () => {
   // const location=useLocation();
   // if(location.pathname!='/loading'){
   return (
-    <footer>
+    <footer className='footer'>
         &copy; BookNook | 2024
     </footer>
   );
