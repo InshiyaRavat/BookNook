@@ -34,7 +34,7 @@ const Login = () => {
     async function handleSingUp(e){
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8085/addUser', userInfo)
+            const response = await axios.post('http://localhost:8085/user', userInfo)
             console.log(response.data); 
         } catch (error) {
             console.error('User registration failed:', error.response.data)
