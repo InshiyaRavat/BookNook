@@ -422,6 +422,12 @@ body{
     cursor: pointer;
   } 
 /* ######################### login page end ########################### */
+/* ######################### footer ################################### */
+.footer{
+  background-color: #EFF0F0;
+  font-size: medium;
+  font-weight: bold;
+}
 /* ######################### store #################################### */
 .mycard{
   position: relative;
@@ -473,3 +479,79 @@ body{
   border-width: 0.05cm; 
 }
 /* ############################## store end ################################# */
+/* ############################## product start ############################# */
+.prodCard {
+  position: relative;
+  background: #EFF0F0;
+  border: solid 4px #4F5D75;
+  box-shadow: -5px 5px #4F5D75;
+  transition: all .2s ease-in-out;
+  border-radius: 0;
+  margin: 20px;
+}
+
+.prodCard:hover {
+  transform: translate(-5px, 5px);
+  box-shadow: 0px 0px #4F5D75;
+}
+
+.prodImg img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding-bottom: 20px;
+}
+
+.prodBody {
+  padding: 20px;
+}
+
+.prodTitle {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: #2D3142;
+  margin-bottom: 10px;
+}
+
+.prodDescription {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2D3142;
+  margin-bottom: 20px;
+}
+
+.prodPriceAndCategory {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prodPrice {
+  font-size: 20px;
+  font-weight: 500;
+  color: #4F5D75;
+}
+
+.prodCategory {
+  font-size: 16px;
+  font-weight: 400;
+  color: #4F5D75;
+}
+
+.prodBtn {
+  background-color: #4F5D75;
+  color: #EFF0F0;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prodBtn:hover {
+  background-color: #364958;
+}

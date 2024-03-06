@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Loading from '../components/Loading';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const Store = () => {
   const [search, setSearch] = useState('');
@@ -38,6 +39,7 @@ const Store = () => {
 
   return (
     <div>
+      <Navbar/>
       {loading ? (
         <Loading />
       ) : (
@@ -57,10 +59,8 @@ const Store = () => {
           </form>
           {books.map((book, index) => (
             <Link
-              to={{
-                pathname: `/product/${book.title}`, 
-                state: {title:book.title,price:book.price,imageUrl:book.imageUrl,description:book.description,category:book.category,id:book.id},
-              }}
+              to={`/product/${book.title}`}
+              state={book}
               style={{ textDecoration: 'none' }}
             >
               <div key={index} className="mycard card mb-3">
