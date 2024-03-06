@@ -1,8 +1,9 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const Rent = () => {
   return (
-    <div>Rent</div>
+    <div><Navbar/> Rent</div>
   )
 }
 

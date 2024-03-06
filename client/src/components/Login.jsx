@@ -22,6 +22,10 @@ const Login = () => {
         try {
             const response = await axios.post('http://localhost:8085/authenticate', userInfo)
             console.log(response.data)
+            if(response.data === 'Authenticated'){
+                console.log(`user: ${userInfo.name}`)
+                localStorage.setItem('username',JSON.stringify(userInfo.name))
+            }
             navigate('/store')
         } catch (error) {
             console.error('Authentication failed:', error)
@@ -48,7 +52,7 @@ const Login = () => {
                     <div class="flip-card__front">
                      <div class="title">Log in</div>
                      <form action="" class="flip-card__form">
-                        <input type="email" placeholder="Email" name="email" value={userInfo.email} onChange={handleChange} class="flip-card__input"/>
+                        <input type="name" placeholder="Name" value={userInfo.name} onChange={handleChange} name="name" class="flip-card__input"/>
                         <input type="password" placeholder="Password" value={userInfo.password} name="password" onChange={handleChange} class="flip-card__input"/>
                         <button class="flip-card__btn" onClick={handleSignIn}>Let`s go!</button>
                      </form>
