@@ -1,59 +1,76 @@
-import React, { useState } from 'react'
-import logo from '../images/booknook-logo.png'
-import { Avatar } from '@mui/material'
+import React, { useState, useEffect } from 'react';
+import logo from '../images/booknook-logo.png';
+import Avatar from '@mui/material/Avatar';
 
 const Navbar = () => {
-    const [activeTab,setActiveTab] = useState('Store')
+    const [activeTab, setActiveTab] = useState('Store');
+    const [username, setUsername] = useState('');
 
-    const handleClick=(e)=>{
-        setActiveTab(e.target.value)
-    }
+    useEffect(() => {
+        const storedUsername = localStorage.getItem('username');
+        console.log(storedUsername)
+        if (storedUsername) {
+            setUsername(storedUsername);
+        }
+    }, []);
+
+    const handleClick = (e) => {
+        setActiveTab(e.target.value);
+    };
+
     function stringToColor(string) {
         let hash = 0;
         let i;
-      
-        /* eslint-disable no-bitwise */
-        for (i = 0; i < string.length; i += 1) {
-          hash = string.charCodeAt(i) + ((hash << 5) - hash);
+
+        for (i = 0; i < string.length; i++) {
+            hash = string.charCodeAt(i) + ((hash << 5) - hash);
         }
-      
+
         let color = '#';
-      
-        for (i = 0; i < 3; i += 1) {
-          const value = (hash >> (i * 8)) & 0xff;
-          color += `00${value.toString(16)}`.slice(-2);
+
+        for (i = 0; i < 3; i++) {
+            const value = (hash >> (i * 8)) & 0xff;
+            color += `00${value.toString(16)}`.slice(-2);
         }
-        /* eslint-enable no-bitwise */
-      
+
         return color;
-      }
-      
-      function stringAvatar(name) {
+    }
+    
+    function stringAvatar(name) {
+        const parts = name.split(' ');
+        let initials = '';
+    
+        parts.forEach(part => {
+            initials += part.charAt(1);
+        });
         return {
-          sx: {
-            bgcolor: stringToColor(name),
-          },
-          children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
+            sx: {
+                bgcolor: stringToColor(name),
+            },
+            children: initials,
         };
-      }
-  return (
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid text-center">
-                <a class="navbar-brand" href="/"><img src={logo} width={110} height={40}/></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    }
+
+    return (
+        <nav className="navbar navbar-expand-lg">
+            <div className="container-fluid text-center">
+                <a className="navbar-brand" href="/">
+                    <img src={logo} width={110} height={40} alt="Booknook Logo" />
+                </a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class={`nav-link ${activeTab === 'Store' ? 'active' : ''}`} value='Store' onClick={handleClick} aria-current="page" href="/store">Book Store</a>
-                    <a class={`nav-link ${activeTab === 'Rent' ? 'active' : ''}`} value='Rent' onClick={handleClick} href="/rent">Rent Books</a>
-                    <a class={`nav-link ${activeTab === 'Cart' ? 'active' : ''}`} value='Cart' onClick={handleClick} href="/cart">Cart</a>
+                <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div className="navbar-nav">
+                        <a className={`nav-link ${activeTab === 'Store' ? 'active' : ''}`} value='Store' onClick={handleClick} aria-current="page" href="/store">Book Store</a>
+                        <a className={`nav-link ${activeTab === 'Rent' ? 'active' : ''}`} value='Rent' onClick={handleClick} href="/rent">Rent Books</a>
+                        <a className={`nav-link ${activeTab === 'Cart' ? 'active' : ''}`} value='Cart' onClick={handleClick} href="/cart">Cart</a>
+                    </div>
                 </div>
-                </div>
-                <Avatar {...stringAvatar('Inshiya Ravat')} />
+                {username && <Avatar style={{backgroundColor: stringToColor(username)}} {...stringAvatar(username)} />}
             </div>
         </nav>
-  )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
