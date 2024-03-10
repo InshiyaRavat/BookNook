@@ -63,7 +63,6 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <a className={`nav-link ${activeTab === 'Store' ? 'active' : ''}`} value='Store' onClick={handleClick} aria-current="page" href="/store">Book Store</a>
-                        <a className={`nav-link ${activeTab === 'Rent' ? 'active' : ''}`} value='Rent' onClick={handleClick} href="/rent">Rent Books</a>
                         <a className={`nav-link ${activeTab === 'Cart' ? 'active' : ''}`} value='Cart' onClick={handleClick} href="/cart">Cart</a>
                     </div>
                 </div>
