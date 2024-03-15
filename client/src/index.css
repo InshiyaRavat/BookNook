@@ -1,6 +1,40 @@
 body{
     margin: 0;
 }
+/* #################### navbar ########################## */
+.dropdownmenu {
+  position: absolute;
+  top: 40px; /* Adjust as needed */
+  right: 0; /* Adjust as needed */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  z-index: 1;
+}
+
+.dropdownmenu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdownmenu button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dropdownmenu button:hover {
+  background-color: #f0f0f0;
+}
+/* #################### navbar end ###################### */
 /* #################### loading page #################### */
 .loader {
     --background: linear-gradient(135deg, #657287, #5A687E);
@@ -555,3 +589,20 @@ body{
 .prodBtn:hover {
   background-color: #364958;
 }
+/* #############################  CART #########################*/
+.cartBtn{
+  background-color: #4F5D75;
+  color: #EFF0F0;
+  border: none;
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 50px;
+  transition: background-color 0.3s ease;
+}
+.cartBtn:hover {
+  background-color: #364958;
+}
+
