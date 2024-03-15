@@ -4,9 +4,10 @@ import axios from 'axios'
 
 const Cart = () => {
   const [cart,setCart] = useState([]);
+  const userId = sessionStorage.getItem('userId')
+
   async function fetchCart(){
     try{
-      const userId = sessionStorage.getItem('userId')
       console.log(userId)
       const response = await axios.get(`http://localhost:8085/cart/${userId}`)
       console.log(response.data)
@@ -16,7 +17,17 @@ const Cart = () => {
       console.error("could not get books from cart",error)
     }
   }
-
+  async function handleDelete(id){
+    try{
+      const response = await axios.delete(`http://localhost:8085/book/${userId}/${id}`)
+      console.log("from delete: ")
+      console.log(response.data)
+      fetchCart()
+    }
+    catch(error){
+      console.error("could not delete from cart : ",error)
+    }
+  }
   useEffect(()=>{
     fetchCart()
   },[])
@@ -24,7 +35,7 @@ const Cart = () => {
     <div>
       <Navbar/> 
       {cart.map((book)=>(
-        <div className="mycard card mb-3">
+        <div key={book.id} className="mycard card mb-3">
         <div className="row g-0" key={book.id}>
           <div className="col-md-4">
             <img src="" alt={book.title} style={{ maxWidth: '100px !important', height: '200px !important' }} />
@@ -33,9 +44,10 @@ const Cart = () => {
             <div className="card-body">
               <h5 className="mycardtitle card-title">{book.title}</h5>
                 <p className="cardsubtitle card-text">{book.description}</p>
-                  <small className="cardprice text-body-secondary">
-                      <span>$</span> {book.price}
-                  </small>
+                <small className="cardprice text-body-secondary">
+                  <span>$</span> {book.price}
+                </small>
+                <button onClick={()=>handleDelete(book.id)} className='cartBtn'>remove from cart</button>
             </div>
           </div>
           </div>
