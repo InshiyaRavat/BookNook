@@ -28,7 +28,7 @@ const Login = () => {
       if (response.data.authenticated) {
         console.log(`user: ${userInfo.name}`);
         sessionStorage.setItem("authentication", "success");
-        sessionStorage.setItem('username', JSON.stringify(userInfo.name));
+        localStorage.setItem('username',JSON.stringify(userInfo.name));
         sessionStorage.setItem('userId', JSON.stringify(response.data.userId)); 
         navigate('/store');
       }
@@ -46,6 +46,13 @@ const Login = () => {
         console.error('User registration failed:', error.response.data)
     }
   }
+
+  // useEffect(() => {
+  //   const storedUsername = localStorage.getItem('username');
+  //   if (storedUsername) {
+  //     navigate('/store'); 
+  //   }
+  // }, [navigate]);
 
   return (
     <div className='bg-login'>
