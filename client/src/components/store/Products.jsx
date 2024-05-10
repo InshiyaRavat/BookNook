@@ -16,7 +16,12 @@ const Products = () => {
       try {
         const uid = sessionStorage.getItem('userId')
         console.log(uid)
-          const response = await axios.post(`http://localhost:8085/cart/${uid}`, title);
+          console.log(title)
+          const response = await axios.post(`http://localhost:8085/cart/${uid}`,title,{
+            headers : {
+              'Content-Type' : 'text/plain'
+            }
+          });
           console.log(response.data);
           localStorage.setItem("book",location.state)
           navigate('/cart');
@@ -36,7 +41,7 @@ const Products = () => {
             <h1 className='prodTitle'>{title}</h1> 
             <p>{description}</p>
             <div className='prodPriceAndCategory'>
-              <p className='prodPrice'>${price}</p>
+              <p className='prodPrice'>₹{price}</p>
               <p className='prodCategory'>{category}</p>
             </div>
             <button onClick={addToCart} className='prodBtn'>Add to cart</button> 

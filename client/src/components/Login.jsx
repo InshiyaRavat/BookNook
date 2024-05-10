@@ -28,8 +28,8 @@ const Login = () => {
       if (response.data.authenticated) {
         console.log(`user: ${userInfo.name}`);
         sessionStorage.setItem("authentication", "success");
-        localStorage.setItem('username',JSON.stringify(userInfo.name));
-        sessionStorage.setItem('userId', JSON.stringify(response.data.userId)); 
+        localStorage.setItem('username',userInfo.name);
+        sessionStorage.setItem('userId',response.data.userId); 
         navigate('/store');
       }
     } catch (error) {

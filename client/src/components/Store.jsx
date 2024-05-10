@@ -80,7 +80,7 @@ const Store = () => {
                           <h5 className="mycardtitle card-title">{book.title}</h5>
                           <p className="cardsubtitle card-text">{book.description}</p>
                           <small className="cardprice text-body-secondary">
-                            <span>$</span> {book.price}
+                            <span>₹</span> {book.price}
                           </small>
                         </div>
                       </div>

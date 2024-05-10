@@ -602,7 +602,51 @@ body{
   margin-left: 50px;
   transition: background-color 0.3s ease;
 }
-.cartBtn:hover {
+.cartBtn:hover{
   background-color: #364958;
+}/* Total price section */
+.total-price {
+  display: flex;
+  font-size: 16px; /* Adjust as needed */
+  font-weight: 500; /* Adjust as needed */
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Adjust spacing */
+  padding: 10px; /* Adjust spacing */
+  background-color: #EFF0F0; /* Background color */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
 }
 
+.total-price .text {
+  flex: 1; /* Take remaining space */
+  text-align: center; /* Center text */
+  margin-right: 10px; 
+  padding-right:300px;
+}
+
+.total-price .price {
+  font-weight: bold;
+  color: #4F5D75; /* Price color */
+  padding-right:300px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .total-price {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .total-price {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    text-align: center; /* Center align text on smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .total-price .text {
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 5px; /* Add spacing between text and price on smaller screens */
+  }
+}
